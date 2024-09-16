@@ -8,7 +8,7 @@ export default function CustomButton() {
   return (
     <SafeAreaView>
       <Banner
-        text="There was a problem processing a transaction on your credit card."
+        text="Os botões permitem que os usuários realizem ações e escolhas com um único toque."
         buttons={
           <HStack spacing={2}>
             <Avatar

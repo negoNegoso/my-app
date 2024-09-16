@@ -1,24 +1,31 @@
 import React from "react"
-import { HStack, Banner, Button, Avatar,Stack } from "@react-native-material/core";
+import { Stack, Chip,Banner,HStack,Avatar,Button } from "@react-native-material/core";
 import { SafeAreaView } from 'react-native';
 
 import Icon from "@expo/vector-icons/MaterialCommunityIcons";
 
-export default function CustomButton() {
+export default function CustomChip() {
   return (
     <SafeAreaView>
       <Banner
-        text="There was a problem processing a transaction on your credit card."
+        text="Um chip é um pequeno bloco de informações,
+         normalmente usado para representar uma categoria."
         buttons={
           <HStack spacing={2}>
-            <Avatar
+            <HStack fill center spacing={4}>
+            <Chip label="Filled" />
+            <Chip variant="outlined" label="Outlined" />
+            <Chip
+              label="Filled"
               color="primary"
-              icon={props => <Icon name="wifi-off" />}
+              leading={props => <Icon name="home" {...props} />}
             />
-            <HStack fill center spacing={2}>
-              <Button title="Contained" />
-              <Button variant="outlined" title="Outlined" />
-              <Button variant="text" title="Text" />
+            <Chip
+              variant="outlined"
+              label="Outlined"
+              color="primary"
+              leading={props => <Icon name="menu" {...props} />}
+            />
             </HStack>
           </HStack>
         }
