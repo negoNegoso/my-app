@@ -12,4 +12,4 @@ const FeedButton = ({ isHungry, setIsHungry }) => {
     );
   };
 
-export default FeedBButton;
+export default FeedButton;
